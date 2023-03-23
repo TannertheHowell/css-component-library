@@ -49,10 +49,6 @@ body {
     transition: transform .75s;
 }
 
-.material-icons.md-24 {
-    font-size: 24px;
-}
-
 .material-icons.md-36 {
     font-size: 36px;
 }
@@ -67,6 +63,7 @@ body {
     animation: appear 1s steps(7, end) forwards;
     font-weight: bold;
     font: 2em;
+    color: rgb(20,20,20);
 }
 
 @keyframes appear {
