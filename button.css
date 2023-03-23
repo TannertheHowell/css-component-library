@@ -1,10 +1,8 @@
-
-body{
+body {
     background-color: rgb(27,35,39);
-}
-
-
-.fancy-button{
+  }
+  
+.fancy-button {
     width: 80px;
     height: 80px;
     padding: 16px;
@@ -12,54 +10,73 @@ body{
     justify-content: center;
     align-items: center;
     border: none;
-    background-color: rgb(180,190,173); 
+    background-color: rgb(180,190,173);
     color: rgb(252,255,255);
     border-radius: 100%;
     box-shadow: 0 8px 16px rgba(247, 244, 244, 0.1), 0 6px 12px rgba(240, 239, 239, 0.12);
 }
 
-.fancy-button:hover{
+.fancy-button:hover {
     transform: scale(1.15);
     transition: transform .75s;
 }
 
-.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-36 {
+    font-size: 36px;
+}
 
 .fancy-button .material-icons.md-36 {
     transition: opacity 0.2s ease-in-out;
-  }
-  
+}
+
 .fancy-button.saving .material-icons.md-36 {
-opacity: 0;
+    opacity: 0;
 }
 
 .fancy-button.saving:after {
-content: "";
-display: inline-block;
-animation: appear 2s steps(7, end) forwards;
-animation-fill-mode: forwards;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: appear 1s steps(7, end) forwards;
+    font-weight: bold;
+    font: 2em;
 }
 
 @keyframes appear {
-0% {
-    content: "S";
-}
-10% {
-    content: "Sa";
-}
-20% {
-    content: "Sav";
-}
-30% {
-    content: "Savi";
-}
-40% {
-    content: "Savin";
-}
-50% {
-    content: "Saving";
-}
-100% {
-    content: "Saving";
-}
+    0% {
+        content: "S";
+    }
+    10% {
+        content: "Sa";
+    }
+    20% {
+        content: "Sav";
+    }
+    30% {
+        content: "Savi";
+    }
+    40% {
+        content: "Savin";
+    }
+    50% {
+        content: "Saving";
+    }
+    60% {
+        content: "Saving.";
+        }
+    70% {
+        content: "Saving..";
+    }
+    80% {
+        content: "Saving...";
+    }
+    90% {
+        content: "Saving....";
+    }
+    100% {
+        content: "Saved!";
+    }
 }

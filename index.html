@@ -7,8 +7,11 @@
     <title>Component Library</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="button.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="assn5.js" defer></script>
+    <script src="navbar.js" defer></script>
+    <script src="button.js" defer></script>
 </head>
 <body>
     
@@ -119,19 +122,111 @@
 
         <h4>HTML</h4>
         <pre class="codeContainer">
-            &lt; open close &gt;
-                <!-- HTML CODE HERE -->
+            &lt;button class="fancy-button"&gt;
+                &lt;span class="material-icons md-36"&gt;save&lt;/span&gt;
+            &lt;/button&gt;
         </pre>
 
         <h4>CSS</h4>
         <pre class="codeContainer" id="navDrawerCSS">
-            <!-- .css stuff here -->
+            body {
+                background-color: rgb(27,35,39);
+              }
+              
+            .fancy-button {
+                width: 80px;
+                height: 80px;
+                padding: 16px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: none;
+                background-color: rgb(180,190,173);
+                color: rgb(252,255,255);
+                border-radius: 100%;
+                box-shadow: 0 8px 16px rgba(247, 244, 244, 0.1), 0 6px 12px rgba(240, 239, 239, 0.12);
+            }
+            
+            .fancy-button:hover {
+                transform: scale(1.15);
+                transition: transform .75s;
+            }
+            
+            .material-icons.md-36 {
+                font-size: 36px;
+            }
+            
+            .fancy-button .material-icons.md-36 {
+                transition: opacity 0.2s ease-in-out;
+            }
+            
+            .fancy-button.saving .material-icons.md-36 {
+                opacity: 0;
+            }
+            
+            .fancy-button.saving:after {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                animation: appear 1s steps(7, end) forwards;
+                font-weight: bold;
+                font: 2em;
+            }
+            
+            @keyframes appear {
+                0% {
+                    content: "S";
+                }
+                10% {
+                    content: "Sa";
+                }
+                20% {
+                    content: "Sav";
+                }
+                30% {
+                    content: "Savi";
+                }
+                40% {
+                    content: "Savin";
+                }
+                50% {
+                    content: "Saving";
+                }
+                60% {
+                    content: "Saving.";
+                    }
+                70% {
+                    content: "Saving..";
+                }
+                80% {
+                    content: "Saving...";
+                }
+                90% {
+                    content: "Saving....";
+                }
+                100% {
+                    content: "Saved!";
+                }
+            }
         </pre>
         
         <h4>JavaScript</h4>
 
         <pre class="codeContainer" id="navDrawerJS">
-            <!-- JAVASCRIPT STUFF HERE -->
+            const fancyButton = document.querySelector('.fancy-button');
+            const icon = document.querySelector('.material-icons.md-36');
+
+            fancyButton.addEventListener('click', () => {
+            fancyButton.classList.add('saving');
+            icon.textContent = 'Saving...';
+            setTimeout(() => {
+                fancyButton.classList.remove('saving');
+                icon.textContent = 'save';
+            }, 2100);
+            });
         </pre>
     </div>
 

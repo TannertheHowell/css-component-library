@@ -13,3 +13,9 @@ document.getElementById("navBarHTML").innerHTML = `
     </section> 
 </nav>
 `;
+
+document.getElementById("buttonHTML").innerHTML = `
+<button class="fancy-button">
+    <span class="material-icons md-36">save</span>
+</button>
+`
