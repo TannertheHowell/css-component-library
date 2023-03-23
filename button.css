@@ -9,6 +9,8 @@ body {
 }
   
 .save-button{
+    height: 75px;
+    width: 180px;
     padding: 16px;
     margin: 16px;
     display: flex;
@@ -20,11 +22,12 @@ body {
     border-radius: 16px;
     box-shadow: 0 8px 16px rgba(247, 244, 244, 0.1), 0 6px 12px rgba(240, 239, 239, 0.12);
     font: bold;
+    font-size: 200%;
 }
 
 .floating-button {
-    width: 60px;
-    height: 60px;
+    width: 75px;
+    height: 75px;
     padding: 16px;
     display: flex;
     justify-content: center;

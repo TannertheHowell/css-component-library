@@ -128,7 +128,8 @@
 
                 &lt;!-- Icon button --&gt;
                 &lt;button class="save-button"&gt;
-                    &lt;span class="material-icons md-24"&gt;save&lt;/span&gt;
+                    &lt;span class="material-icons md-36"&gt;save&lt;/span&gt;
+                    Save
                 &lt;/button&gt;
 
                 &lt;!-- Floating action button --&gt;
@@ -151,6 +152,8 @@
             }
               
             .save-button{
+                height: 75px;
+                width: 180px;
                 padding: 16px;
                 margin: 16px;
                 display: flex;
@@ -162,16 +165,12 @@
                 border-radius: 16px;
                 box-shadow: 0 8px 16px rgba(247, 244, 244, 0.1), 0 6px 12px rgba(240, 239, 239, 0.12);
                 font: bold;
+                font-size: 200%;
             }
             
-            .save-button:hover {
-                background-color: rgba(139, 123, 123, 0.29);
-                color: rgb(252,255,255);
-              }
-            
             .floating-button {
-                width: 80px;
-                height: 80px;
+                width: 75px;
+                height: 75px;
                 padding: 16px;
                 display: flex;
                 justify-content: center;
@@ -183,8 +182,13 @@
                 box-shadow: 0 8px 16px rgba(247, 244, 244, 0.1), 0 6px 12px rgba(240, 239, 239, 0.12);
             }
             
+            .save-button:hover {
+                background-color: rgba(139, 123, 123, 0.29);
+                color: rgb(252,255,255);
+              }
+            
             .floating-button:hover {
-                transform: scale(1.15);
+                transform: scale(1.25);
                 transition: transform .75s;
             }
             
@@ -195,7 +199,7 @@
             .material-icons.md-36 {
                 font-size: 36px;
             }
-            
+            /* I need to find the blog tutorial where I found this with the car demo */
             .floating-button.saving:after {
                 content: "";
                 display: inline-block;

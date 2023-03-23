@@ -21,7 +21,8 @@ document.getElementById("buttonHTML").innerHTML = `
 
     <!-- Icon button -->
     <button class="save-button">
-        <span class="material-icons md-24">save</span>
+    <span class="material-icons md-36">save</span>
+    Save
     </button>
 
     <!-- Floating action button -->
