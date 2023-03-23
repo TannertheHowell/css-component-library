@@ -15,7 +15,18 @@ document.getElementById("navBarHTML").innerHTML = `
 `;
 
 document.getElementById("buttonHTML").innerHTML = `
-<button class="fancy-button">
-    <span class="material-icons md-36">save</span>
-</button>
+<div class="buttonBox">
+    <!-- Regular button -->
+    <button class="save-button">Save</button>
+
+    <!-- Icon button -->
+    <button class="save-button">
+        <span class="material-icons md-24">save</span>
+    </button>
+
+    <!-- Floating action button -->
+    <button class="floating-button">
+        <span class="material-icons md-36">save</span>
+    </button>
+</div>
 `

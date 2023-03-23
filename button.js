@@ -1,11 +1,11 @@
-const fancyButton = document.querySelector('.fancy-button');
+const floatingButton = document.querySelector('.floating-button');
 const icon = document.querySelector('.material-icons.md-36');
 
-fancyButton.addEventListener('click', () => {
-    fancyButton.classList.add('saving');
+floatingButton.addEventListener('click', () => {
+    floatingButton.classList.add('saving');
     icon.textContent = 'Saving...';
     setTimeout(() => {
-        fancyButton.classList.remove('saving');
+        floatingButton.classList.remove('saving');
         icon.textContent = 'save';
     }, 2100);
 });

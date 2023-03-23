@@ -1,10 +1,30 @@
 body {
     background-color: rgb(27,35,39);
   }
+
+.buttonBox{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
   
-.fancy-button {
-    width: 80px;
-    height: 80px;
+.save-button{
+    padding: 16px;
+    margin: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: rgb(180,190,173);
+    color: rgb(252,255,255);
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(247, 244, 244, 0.1), 0 6px 12px rgba(240, 239, 239, 0.12);
+    font: bold;
+}
+
+.floating-button {
+    width: 60px;
+    height: 60px;
     padding: 16px;
     display: flex;
     justify-content: center;
@@ -16,16 +36,20 @@ body {
     box-shadow: 0 8px 16px rgba(247, 244, 244, 0.1), 0 6px 12px rgba(240, 239, 239, 0.12);
 }
 
-.fancy-button:hover {
-    transform: scale(1.15);
+.floating-button:hover {
+    transform: scale(1.25);
     transition: transform .75s;
+}
+
+.material-icons.md-24 {
+    font-size: 24px;
 }
 
 .material-icons.md-36 {
     font-size: 36px;
 }
-
-.fancy-button.saving:after {
+/* I need to find the blog tutorial where I found this with the car demo */
+.floating-button.saving:after {
     content: "";
     display: inline-block;
     position: absolute;
