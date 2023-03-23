@@ -36,6 +36,11 @@ body {
     box-shadow: 0 8px 16px rgba(247, 244, 244, 0.1), 0 6px 12px rgba(240, 239, 239, 0.12);
 }
 
+.save-button:hover {
+    background-color: rgba(139, 123, 123, 0.29);
+    color: rgb(252,255,255);
+  }
+
 .floating-button:hover {
     transform: scale(1.25);
     transition: transform .75s;
