@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="assn5.js" defer></script>
+</head>
+<body>
+    
+    <h1>SpinUp CSS Library</h1>
+
+    <div class="exampleContainer" id="navBar">
+        <h3>Navbar</h3>
+
+        <h4>Example</h4>
+        <pre id="navBarHTML"></pre>
+
+        <h4>HTML</h4>
+        <pre class="codeContainer" id="navBarHTML">
+            &lt;nav class="navbar fixed"&gt;
+                &lt;section class="navbar-title-section"&gt; 
+                    &lt;button class="navbar-menu-button" id="nav-menu-button"&gt;
+                        &lt;span class="material-icons"&gt;menu&lt;/span&gt; 
+                    &lt;/button&gt;
+                Your Website Title 
+                &lt;/section&gt; 
+                &lt;section class="navbar-link-section"&gt;
+                    &lt;a&gt;Page 1&lt;/a&gt; 
+                    &lt;a&gt;Page 2&lt;/a&gt;
+                    &lt;a&gt;Page 3&lt;/a&gt;
+                &lt;/section&gt; 
+            &lt;/nav&gt;
+        </pre>
+
+        <h4>CSS</h4>
+        <pre class="codeContainer" id="navBarCSS">
+            .navbar { 
+                display: flex;
+                position: absolute;
+                top: 0; 
+                left: 0; 
+                right: 0;
+                padding: 16px;
+                background-color: rgb(180,190,173);
+                color: var(--color-on-secondary); 
+                justify-content: space-between;
+                z-index: 999 ;
+            }
+            
+            .navbar .navbar-title-section { 
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+            
+            .navbar .navbar-title-section .navbar-menu-button {
+                border: none;
+                background: transparent;
+                margin: 0;
+                padding: 0;
+                cursor: pointer;
+            }
+            
+            .navbar .navbar-link-section {
+                display: flex;
+                align-items: center;
+                gap: 32px;
+            }
+            
+            .fixed {
+                position: fixed;
+            }
+        </pre>
+
+        
+        <h4>JavaScript</h4>
+
+        <pre class="codeContainer" id="navBarJS">
+            document.getElementById("nav-menu-button").addEventListener("click", () => {
+                console.log("The navbar menu button was clicked");
+            });
+        </pre>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(27,35,39);
+    color: rgb(252,255,255);
+    margin: 0px;
+    padding: 0 25% 16.67% 25%;
+}
+
+h1{
+    text-align: center;
+    font-weight: bold;
+}
+
+.codeContainer{
+    background-color: rgb(40,54,59);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 16px;
+}
