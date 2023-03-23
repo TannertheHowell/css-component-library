@@ -7,10 +7,9 @@ document.getElementById("navBarHTML").innerHTML = `
         Your Website Title 
     </section> 
     <section class="navbar-link-section">
-        <a>Page 1</a> 
-        <a>Page 2</a>
-        <a>Page 3</a>
+        <a href="https://www.youtube.com/watch?v=8ybW48rKBME">Page 1</a>  
+        <a href="https://www.youtube.com/watch?v=8ybW48rKBME">Page 2</a>
+        <a href="https://www.youtube.com/watch?v=8ybW48rKBME">Page 3</a>
     </section> 
 </nav>
 `;
-
