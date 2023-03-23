@@ -156,14 +156,6 @@
                 font-size: 36px;
             }
             
-            .fancy-button .material-icons.md-36 {
-                transition: opacity 0.2s ease-in-out;
-            }
-            
-            .fancy-button.saving .material-icons.md-36 {
-                opacity: 0;
-            }
-            
             .fancy-button.saving:after {
                 content: "";
                 display: inline-block;
@@ -220,12 +212,12 @@
             const icon = document.querySelector('.material-icons.md-36');
 
             fancyButton.addEventListener('click', () => {
-            fancyButton.classList.add('saving');
-            icon.textContent = 'Saving...';
-            setTimeout(() => {
-                fancyButton.classList.remove('saving');
-                icon.textContent = 'save';
-            }, 2100);
+                fancyButton.classList.add('saving');
+                icon.textContent = 'Saving...';
+                setTimeout(() => {
+                    fancyButton.classList.remove('saving');
+                    icon.textContent = 'save';
+                }, 2100);
             });
         </pre>
     </div>
