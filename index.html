@@ -100,19 +100,67 @@
 
         <h4>HTML</h4>
         <pre class="codeContainer">
-            &lt; open close &gt;
-                <!-- HTML CODE HERE -->
+            &lt;nav class=&quot;navbar fixed&quot;&gt;
+                &lt;section class=&quot;navbar-title-section&quot;&gt; 
+                    &lt;button class= &quot;navbar-menu-button&quot; id=&quot;nav-menu-button&quot;&gt;
+                        &lt;span class= &quot;material-icons&quot;&gt;menu&lt;/span&gt; 
+                    &lt;/button&gt;
+                    Your Website Title 
+                &lt;/section&gt; 
+            &lt;section class=&quot;navbar-link-section&quot;&gt;
+                &lt;a&gt;&lt;/a&gt; 
+                &lt;a&gt;&lt;/a&gt;
+                &lt;a&gt;&lt;/a&gt;
+            &lt;/section&gt; 
+            &lt;/nav&gt;
+
+            &lt;nav class=&quot;drawer&quot; id=&quot;drawer&quot;&gt;
+                &lt;a&gt;&lt;span class=&quot;material-icons&quot;&gt;home&lt;/span&gt;Home Page&lt;/a&gt; 
+                &lt;a&gt;&lt;span class=&quot;material-icons&quot;&gt;settings&lt;/span&gt;Profile&lt;/a&gt;
+                &lt;a&gt;&lt;span class=&quot;material-icons&quot;&gt;person&lt;/span&gt;About Us&lt;/a&gt;
+                &lt;a&gt;&lt;span class=&quot;material-icons&quot;&gt;contact_support&lt;/span&gt;Contact Us&lt;/a&gt;
+                &lt;a&gt;&lt;span class=&quot;material-icons&quot;&gt;policy&lt;/span&gt;Legal&lt;/a&gt;
+            &lt;/nav&gt;
         </pre>
 
         <h4>CSS</h4>
         <pre class="codeContainer" id="navDrawerCSS">
-            <!-- .css stuff here -->
+            .drawer {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                position: fixed;
+                font-weight: bolder;
+                top: 43px;
+                left: -200px;
+                bottom: 0;
+                width: 175px;
+                background-color: rgb(180,190,173);
+                color: rgb(20,20,20);
+                display: flex;
+                flex-direction: column;
+                box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+            }
+            .drawer[data-open="true"]{
+                left: 0px;
+            }
+            
+            .drawer > a {
+                display: flex;
+                padding: 16px 16px;
+                align-items: center;
+                gap: 8px;
+            }
         </pre>
         
         <h4>JavaScript</h4>
 
         <pre class="codeContainer" id="navDrawerJS">
-            <!-- JAVASCRIPT STUFF HERE -->
+            let navOpen = false;
+
+            document.getElementById("drawer");
+            document.getElementById("nav-menu-button").addEventListener("click", () => {
+                navOpen = !navOpen;
+                drawer.dataset.open = `${navOpen}`;
+            });
         </pre>
     </div>
 

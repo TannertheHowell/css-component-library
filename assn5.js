@@ -31,3 +31,27 @@ document.getElementById("buttonHTML").innerHTML = `
     </button>
 </div>
 `
+
+document.getElementById("navDrawerHTML").innerHTML = `
+<nav class="navbar">
+    <section class="navbar-title-section"> 
+        <button class= "navbar-menu-button" id="nav-menu-button2">
+            <span class= "material-icons">menu</span> 
+        </button>
+        Your Website Title 
+    </section> 
+    <section class="navbar-link-section">
+        <a></a> 
+        <a></a>
+        <a></a>
+    </section> 
+</nav>
+
+<nav class="drawer" id="drawer">
+    <a><span class="material-icons">home</span>Home Page</a> 
+    <a><span class="material-icons">settings</span>Profile</a>
+    <a><span class="material-icons">person</span>About Us</a>
+    <a><span class="material-icons">contact_support</span>Contact Us</a>
+    <a><span class="material-icons">policy</span>Legal</a>
+</nav>
+`
