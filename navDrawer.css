@@ -2,14 +2,18 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     position: fixed;
     font-weight: bolder;
-    top: 70px;
-    left: -300px;
+    top: 43px;
+    left: -200px;
     bottom: 0;
     width: 175px;
     background-color: rgb(180,190,173);
     color: rgb(20,20,20);
     display: flex;
     flex-direction: column;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+.drawer[data-open="true"]{
+    left: 0px;
 }
 
 .drawer > a {

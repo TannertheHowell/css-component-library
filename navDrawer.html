@@ -6,18 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation Drawer</title>
     <link rel="stylesheet" href="navDrawer.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="navDrawer.js" defer></script>
+    <script src="navbar.js" defer></script>
 </head>
 <body>
 
-    <div class="drawer"></div>
+    <nav class="navbar fixed">
+        <section class="navbar-title-section"> 
+            <button class= "navbar-menu-button" id="nav-menu-button">
+                <span class= "material-icons">menu</span> 
+            </button>
+            Your Website Title 
+        </section> 
+        <section class="navbar-link-section">
+            <a></a> 
+            <a></a>
+            <a></a>
+        </section> 
+    </nav>
 
-    <nav class="drawer">
-        <a href="index.html">Home Page</a> 
-        <a>About Us</a>
-        <a>Contact Us</a>
-        <a>SALES!</a>
-        <a>Legal</a>
+    <nav class="drawer" id="drawer">
+        <a><span class="material-icons">home</span>Home Page</a> 
+        <a><span class="material-icons">settings</span>Profile</a>
+        <a><span class="material-icons">person</span>About Us</a>
+        <a><span class="material-icons">contact_support</span>Contact Us</a>
+        <a><span class="material-icons">policy</span>Legal</a>
     </nav>
 
 </html>
