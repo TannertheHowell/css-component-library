@@ -55,3 +55,15 @@ document.getElementById("navDrawerHTML").innerHTML = `
     <a><span class="material-icons">policy</span>Legal</a>
 </nav>
 `
+
+document.getElementById("imageCarHTML").innerHTML = `
+<div class="carousel">
+    <div class="carousel-container">
+        <img src="LavaSnail.PNG" alt="Image 1" height="400px" width="400px">
+        <img src="Better Lava Snail.jpg" alt="Image 2" height="400px" width="400px">
+        <img src="snailRacing.jpg" alt="Image 3" height="400px" width="400px">
+        <img src="snailSurfing.jpg" alt="Image 4" height="400px" width="400px">
+        <img src="snailSkydiving.jpg" alt="Image 5" height="400px" width="400px">
+    </div>
+</div>
+`

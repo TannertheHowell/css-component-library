@@ -319,23 +319,83 @@
         <h2>Image Carousel</h2>
         
         <h4>Example</h4>
-        <pre id="navDrawerHTML"></pre>
+        <pre id="imageCarHTML"></pre>
 
         <h4>HTML</h4>
         <pre class="codeContainer">
-            &lt; open close &gt;
-                <!-- HTML CODE HERE -->
+            &lt;div class="carousel"&gt;
+                &lt;div class="carousel-container"&gt;
+                  &lt;img src="LavaSnail.PNG" alt="Image 1" height="400px" width="400px"&gt;
+                  &lt;img src="Better Lava Snail.jpg" alt="Image 2" height="400px" width="400px"&gt;
+                  &lt;img src="snailRacing.jpg" alt="Image 3" height="400px" width="400px"&gt;
+                  &lt;img src="snailSurfing.jpg" alt="Image 4" height="400px" width="400px"&gt;
+                  &lt;img src="snailSkydiving.jpg" alt="Image 5" height="400px" width="400px"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
         </pre>
 
         <h4>CSS</h4>
         <pre class="codeContainer" id="navDrawerCSS">
-            <!-- .css stuff here -->
+            .carousel {
+                width: 400px;
+                height: 400px;
+                overflow: hidden;
+                position: relative;
+                display: flex;
+              }
+              
+              .carousel-container {
+                align-content: center;
+                width: 2000px; 
+                height: 400px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                animation: slide 10s infinite;
+              }
+              
+              @keyframes slide {
+                0% {
+                  transform: translateX(0);
+                }
+                25% {
+                  transform: translateX(-400px);
+                }
+                50% {
+                  transform: translateX(-800px);
+                }
+                75% {
+                  transform: translateX(-1200px);
+                }
+                100% {
+                  transform: translateX(0);
+                }
+              }
+              
         </pre>
         
         <h4>JavaScript</h4>
 
         <pre class="codeContainer" id="navDrawerJS">
-            <!-- JAVASCRIPT STUFF HERE -->
+            const carousel = document.querySelector('.carousel-container');
+            const images = carousel.querySelectorAll('img');
+            const imageCount = images.length;
+            let counter = 1;
+
+            setInterval(() => {
+            carousel.style.transform = `translateX(${-400 * counter}px)`;
+            counter++;
+            if (counter >= imageCount) {
+                counter = 0;
+                setTimeout(() => {
+                carousel.style.transition = 'none';
+                carousel.style.transform = 'translateX(0)';
+                setTimeout(() => {
+                    carousel.style.transition = 'transform 2s ease-in-out';
+                }, 50);
+                }, 8000);
+            }
+            }, 7000);
         </pre>
     </div>
 
