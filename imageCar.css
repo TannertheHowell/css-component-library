@@ -8,26 +8,30 @@
 
 .carousel-container {
   align-content: center;
-  width: 2000px; 
+  width: 2400px; 
   height: 400px;
   position: absolute;
-  left: 0;
-  top: 0;
-  animation: slide 10s infinite;
+  animation: slide 7s infinite;
 }
 
 @keyframes slide {
   0% {
     transform: translateX(0);
   }
-  25% {
+  20% {
     transform: translateX(-400px);
   }
-  50% {
+  40% {
     transform: translateX(-800px);
   }
-  75% {
+  60% {
     transform: translateX(-1200px);
+  }
+  80% {
+    transform: translateX(-1600px);
+  }
+  100% {
+    transform: translateX(-2000px);
   }
   100% {
     transform: translateX(0);

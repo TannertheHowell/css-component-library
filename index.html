@@ -10,12 +10,14 @@
     <link rel="stylesheet" href="navDrawer.css">
     <link rel="stylesheet" href="button.css">
     <link rel="stylesheet" href="imageCar.css">
+    <link rel="stylesheet" href="loadingSpinners.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="assn5.js" defer></script>
     <script src="navbar.js" defer></script>
     <script src="navDrawer.js" defer></script>
     <script src="button.js" defer></script>
     <script src="imageCar.js" defer></script>
+    <script src="loadingSpinners.css" defer></script>
 </head>
 <body>
     
@@ -193,7 +195,7 @@
         </pre>
 
         <h4>CSS</h4>
-        <pre class="codeContainer" id="navDrawerCSS">
+        <pre class="codeContainer" id="buttonCSS">
             body {
                 background-color: rgb(27,35,39);
               }
@@ -300,7 +302,7 @@
         
         <h4>JavaScript</h4>
 
-        <pre class="codeContainer" id="navDrawerJS">
+        <pre class="codeContainer" id="buttonJS">
             const floatingButton = document.querySelector('.floating-button');
             const icon = document.querySelector('.material-icons.md-36');
 
@@ -315,7 +317,7 @@
         </pre>
     </div>
 
-    <div class="exampleContainer" id="navDrawer">
+    <div class="exampleContainer" id="imageCarousel">
         <h2>Image Carousel</h2>
         
         <h4>Example</h4>
@@ -346,32 +348,32 @@
               
               .carousel-container {
                 align-content: center;
-                width: 2000px; 
+                width: 2400px; 
                 height: 400px;
                 position: absolute;
-                left: 0;
-                top: 0;
-                animation: slide 10s infinite;
+                animation: slide 7s infinite;
               }
               
               @keyframes slide {
                 0% {
                   transform: translateX(0);
                 }
-                25% {
+                20% {
                   transform: translateX(-400px);
                 }
-                50% {
+                40% {
                   transform: translateX(-800px);
                 }
-                75% {
+                60% {
                   transform: translateX(-1200px);
                 }
+                80% {
+                  transform: translateX(-1600px);
+                }
                 100% {
-                  transform: translateX(0);
+                  transform: translateX(-1600px);
                 }
               }
-              
         </pre>
         
         <h4>JavaScript</h4>
@@ -399,11 +401,11 @@
         </pre>
     </div>
 
-    <div class="exampleContainer" id="navDrawer">
+    <div class="exampleContainer" id="loadingSpinners">
         <h2>Loading Spinners</h2>
         
-        <h4>Example</h4>
-        <pre id="navDrawerHTML"></pre>
+        <h4>Examples</h4>
+        <pre id="loadingSpinnersHTML"></pre>
 
         <h4>HTML</h4>
         <pre class="codeContainer">
