@@ -1,0 +1,57 @@
+.spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .blue-ball {
+    width: 64px;
+    height: 64px;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: blue;
+    box-shadow: 0 8px 16px rgba(247, 244, 244, 0.1), 0 6px 12px rgba(240, 239, 239, 0.12);
+    animation: shrink 6s linear infinite;
+  }
+  
+  .red-ball {
+    width: 0;
+    height: 0;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: red;
+    box-shadow: 0 8px 16px rgba(247, 244, 244, 0.1), 0 6px 12px rgba(240, 239, 239, 0.12);
+    animation: grow-shrink 6s linear infinite;
+  }
+  
+  @keyframes shrink {
+    0% {
+      width: 64px;
+      height: 64px;
+    }
+    100% {
+      width: 0;
+      height: 0;
+    }
+  }
+  
+  @keyframes grow-shrink {
+    0% {
+      width: 0;
+      height: 0;
+    }
+    50% {
+      width: 64px;
+      height: 64px;
+    }
+    60% {
+      width: 64px;
+      height: 64px;
+      animation-timing-function: ease-out;
+    }
+    100% {
+      width: 0;
+      height: 0;
+    }
+  }
