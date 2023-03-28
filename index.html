@@ -321,7 +321,17 @@
         <h2>Image Carousel</h2>
         
         <h4>Example</h4>
-        <pre id="imageCarHTML"></pre>
+        <pre id="codeContainer">
+            <div class="carousel" id="carImageDiv">
+                <div class="carousel-container">
+                    <img src="LavaSnail.PNG" alt="Image 1" height="400px" width="400px">
+                    <img src="Better Lava Snail.jpg" alt="Image 2" height="400px" width="400px">
+                    <img src="snailRacing.jpg" alt="Image 3" height="400px" width="400px">
+                    <img src="snailSurfing.jpg" alt="Image 4" height="400px" width="400px">
+                    <img src="snailSkydiving.jpg" alt="Image 5" height="400px" width="400px">
+                </div>
+            </div>
+        </pre>
 
         <h4>HTML</h4>
         <pre class="codeContainer">
@@ -344,9 +354,12 @@
                 overflow: hidden;
                 position: relative;
                 display: flex;
+                align-items: center;
               }
               
               .carousel-container {
+                display: flex;
+                flex-direction: row;
                 align-content: center;
                 width: 2400px; 
                 height: 400px;
@@ -371,8 +384,15 @@
                   transform: translateX(-1600px);
                 }
                 100% {
-                  transform: translateX(-1600px);
+                  transform: translateX(-2000px);
                 }
+                100% {
+                  transform: translateX(0);
+                }
+              }
+              
+              #carImageDiv{
+                margin: auto;
               }
         </pre>
         

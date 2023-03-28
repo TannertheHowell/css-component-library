@@ -4,9 +4,12 @@
   overflow: hidden;
   position: relative;
   display: flex;
+  align-items: center;
 }
 
 .carousel-container {
+  display: flex;
+  flex-direction: row;
   align-content: center;
   width: 2400px; 
   height: 400px;
@@ -36,4 +39,8 @@
   100% {
     transform: translateX(0);
   }
+}
+
+#carImageDiv{
+  margin: auto;
 }
