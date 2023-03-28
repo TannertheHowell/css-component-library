@@ -425,23 +425,90 @@
         <h2>Loading Spinners</h2>
         
         <h4>Examples</h4>
-        <pre id="loadingSpinnersHTML"></pre>
+
+        <div class="spinner">
+            <div class="blue-ball"></div>
+            <div class="red-ball"></div>
+            <div class="blue-ball"></div>
+            <div class="red-ball"></div>
+            <div class="blue-ball"></div>
+        </div>
 
         <h4>HTML</h4>
         <pre class="codeContainer">
-            &lt; open close &gt;
-                <!-- HTML CODE HERE -->
+            &lt;div class="spinner"&gt;
+                &lt;div class="blue-ball"&gt;&lt;/div&gt;
+                &lt;div class="red-ball"&gt;&lt;/div&gt;
+                &lt;div class="blue-ball"&gt;&lt;/div&gt;
+                &lt;div class="red-ball"&gt;&lt;/div&gt;
+                &lt;div class="blue-ball"&gt;&lt;/div&gt;
+            &lt;/div&gt;
         </pre>
 
         <h4>CSS</h4>
         <pre class="codeContainer" id="navDrawerCSS">
-            <!-- .css stuff here -->
+            .spinner {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+            }
+            
+            .blue-ball {
+                width: 64px;
+                height: 64px;
+                margin: 5px;
+                border-radius: 50%;
+                background-color: rgba(150, 142, 142, 0.29);
+                box-shadow: 0 8px 16px rgba(247, 244, 244, 0.1), 0 6px 12px rgba(240, 239, 239, 0.12);
+                animation: shrink-and-grow 10s linear infinite;
+            }
+            
+            .red-ball {
+                width: 0;
+                height: 0;
+                margin: 5px;
+                border-radius: 50%;
+                background-color: rgb(252,255,255);
+                box-shadow: 0 8px 16px rgba(247, 244, 244, 0.1), 0 6px 12px rgba(240, 239, 239, 0.12);
+                animation: grow-and-shrink 10s linear infinite;
+            }
+            
+            @keyframes shrink-and-grow {
+                0%, 75% {
+                    width: 64px;
+                    height: 64px;
+                }
+                25% {
+                    width: 0;
+                    height: 0;
+                }
+                50% {
+                    width: 64px;
+                    height: 64px;
+                }
+                }
+            
+                @keyframes grow-and-shrink {
+                0%, 75% {
+                    width: 0;
+                    height: 0;
+                }
+                25% {
+                    width: 64px;
+                    height: 64px;
+                }
+                50% {
+                    width: 0;
+                    height: 0;
+                }
+            }
         </pre>
         
         <h4>JavaScript</h4>
 
         <pre class="codeContainer" id="navDrawerJS">
-            <!-- JAVASCRIPT STUFF HERE -->
+            " "
         </pre>
     </div>
 
