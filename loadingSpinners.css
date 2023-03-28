@@ -1,3 +1,7 @@
+/* body{
+    background-color: rgb(27,35,39);
+  }
+
 .spinner {
     display: flex;
     justify-content: center;
@@ -51,6 +55,116 @@
       animation-timing-function: ease-out;
     }
     100% {
+      width: 0;
+      height: 0;
+    }
+  } */
+
+
+
+/* 
+  body{
+    background-color: rgb(27,35,39);
+  }
+
+  .spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .blue-ball {
+    width: 64px;
+    height: 64px;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: rgba(139, 123, 123, 0.29);
+    box-shadow: 0 8px 16px rgba(247, 244, 244, 0.1), 0 6px 12px rgba(240, 239, 239, 0.12);
+    animation: shrink-and-grow 12s linear infinite;
+  }
+  
+  .red-ball {
+    width: 0;
+    height: 0;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: rgb(252,255,255);
+    box-shadow: 0 8px 16px rgba(247, 244, 244, 0.1), 0 6px 12px rgba(240, 239, 239, 0.12);
+    animation: shrink-and-grow 12s linear infinite;
+  }
+  
+  @keyframes shrink-and-grow {
+    0%, 75% {
+      width: 64px;
+      height: 64px;
+    }
+    25% {
+      width: 0;
+      height: 0;
+    }
+    50% {
+      width: 64px;
+      height: 64px;
+    }
+  } */
+
+  body{
+    background-color: rgb(27,35,39);
+  }
+
+  .spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .blue-ball {
+    width: 64px;
+    height: 64px;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: rgba(150, 142, 142, 0.29);
+    box-shadow: 0 8px 16px rgba(247, 244, 244, 0.1), 0 6px 12px rgba(240, 239, 239, 0.12);
+    animation: shrink-and-grow 10s linear infinite;
+  }
+  
+  .red-ball {
+    width: 0;
+    height: 0;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: rgb(252,255,255);
+    box-shadow: 0 8px 16px rgba(247, 244, 244, 0.1), 0 6px 12px rgba(240, 239, 239, 0.12);
+    animation: grow-and-shrink 10s linear infinite;
+  }
+  
+  @keyframes shrink-and-grow {
+    0%, 75% {
+      width: 64px;
+      height: 64px;
+    }
+    25% {
+      width: 0;
+      height: 0;
+    }
+    50% {
+      width: 64px;
+      height: 64px;
+    }
+  }
+  
+  @keyframes grow-and-shrink {
+    0%, 75% {
+      width: 0;
+      height: 0;
+    }
+    25% {
+      width: 64px;
+      height: 64px;
+    }
+    50% {
       width: 0;
       height: 0;
     }
