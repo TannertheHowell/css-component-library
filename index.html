@@ -17,7 +17,7 @@
     <script src="navDrawer.js" defer></script>
     <script src="button.js" defer></script>
     <script src="imageCar.js" defer></script>
-    <script src="loadingSpinners.css" defer></script>
+    <script src="loadingSpinners.js" defer></script>
 </head>
 <body>
     
@@ -347,7 +347,7 @@
         </pre>
 
         <h4>CSS</h4>
-        <pre class="codeContainer" id="navDrawerCSS">
+        <pre class="codeContainer" id="imageCarouselCSS">
             .carousel {
                 width: 400px;
                 height: 400px;
@@ -398,7 +398,7 @@
         
         <h4>JavaScript</h4>
 
-        <pre class="codeContainer" id="navDrawerJS">
+        <pre class="codeContainer" id="imageCar">
             const carousel = document.querySelector('.carousel-container');
             const images = carousel.querySelectorAll('img');
             const imageCount = images.length;
@@ -427,11 +427,19 @@
         <h4>Examples</h4>
 
         <div class="spinner">
-            <div class="blue-ball"></div>
-            <div class="red-ball"></div>
-            <div class="blue-ball"></div>
-            <div class="red-ball"></div>
-            <div class="blue-ball"></div>
+            <div class="light-ball"></div>
+            <div class="dark-ball"></div>
+            <div class="light-ball"></div>
+            <div class="dark-ball"></div>
+            <div class="light-ball"></div>
+        </div>
+    
+        <div class="spinner">
+            <div class="letterSpinner">loading</div>
+        </div>
+    
+        <div class="spinner">
+            <div class="rotatingSpinner"></div>
         </div>
 
         <h4>HTML</h4>
@@ -446,32 +454,33 @@
         </pre>
 
         <h4>CSS</h4>
-        <pre class="codeContainer" id="navDrawerCSS">
+        <pre class="codeContainer" id="loadingSpinnersCSS">
             .spinner {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                height: 100%;
+                height: 60px;
+                padding: 28px;
             }
             
-            .blue-ball {
+            .light-ball {
                 width: 64px;
                 height: 64px;
                 margin: 5px;
                 border-radius: 50%;
                 background-color: rgba(150, 142, 142, 0.29);
                 box-shadow: 0 8px 16px rgba(247, 244, 244, 0.1), 0 6px 12px rgba(240, 239, 239, 0.12);
-                animation: shrink-and-grow 10s linear infinite;
+                animation: shrink-and-grow 9s linear infinite;
             }
             
-            .red-ball {
+            .dark-ball {
                 width: 0;
                 height: 0;
                 margin: 5px;
                 border-radius: 50%;
                 background-color: rgb(252,255,255);
                 box-shadow: 0 8px 16px rgba(247, 244, 244, 0.1), 0 6px 12px rgba(240, 239, 239, 0.12);
-                animation: grow-and-shrink 10s linear infinite;
+                animation: grow-and-shrink 9s linear infinite;
             }
             
             @keyframes shrink-and-grow {
@@ -503,12 +512,93 @@
                     height: 0;
                 }
             }
+            
+            .rotatingSpinner {
+                border: 16px solid rgba(20,20, 20, 0.1);
+                border-left-color: rgb(190, 32, 32);
+                border-radius: 50%;
+                width: 48px;
+                height: 48px;
+                animation: spin 5s linear infinite;
+                background-color: rgba(252, 255, 255, 0.253);
+              }
+            
+              @keyframes spin {
+                0% {
+                  transform: rotate(0deg);
+                  border-left-color: rgb(190, 32, 32);
+                }
+                10% {
+                  border-left-color: rgb(33, 56, 187);
+                }
+                20% {
+                  border-left-color: rgb(32, 190, 32);
+                }
+                30% {
+                  border-left-color: rgb(190, 187, 32);
+                }
+                40% {
+                  border-left-color: rgb(190, 32, 123);
+                }
+                50% {
+                  border-left-color: rgb(33, 123, 187);
+                }
+                60% {
+                  border-left-color: rgb(123, 190, 32);
+                }
+                70% {
+                  border-left-color: rgb(190, 123, 32);
+                }
+                80% {
+                  border-left-color: rgb(88, 88, 88);
+                }
+                90% {
+                  border-left-color: rgb(71, 158, 158);
+                }
+                100% {
+                  transform: rotate(360deg);
+                  border-left-color: rgb(59, 128, 80);
+                }
+              }
+            
+            .letterSpinner {
+                position: relative;
+                width: 86px;
+                height: 86px;
+                font-family: Jazz LET, fantasy;
+                font-size: 2em;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+                border: 4px solid rgb(252,255,255);
+                box-shadow: 0 8px 16px rgba(247, 244, 244, 0.1), 0 6px 12px rgba(240, 239, 239, 0.12);
+                border-radius: 50%;
+                color: rgb(252,255,255);
+                font-size: 1.5em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .letterSpinner:hover {
+                color: rgba(20, 20, 20, 0.253);
+                background-color: rgb(222, 224, 224);
+              }
+            
         </pre>
         
         <h4>JavaScript</h4>
 
-        <pre class="codeContainer" id="navDrawerJS">
-            " "
+        <pre class="codeContainer" id="loadingSpinnersJS">
+            const letterSpinner = document.querySelector('.letterSpinner');
+            const loadingText = 'loading';
+            let currentLetter = 0;
+
+            setInterval(() => {
+                if (currentLetter > loadingText.length) {
+                    return;
+                }
+                letterSpinner.textContent = loadingText.slice(0, currentLetter).toUpperCase() + loadingText.slice(currentLetter);
+                currentLetter += 1;
+            }, 600);
         </pre>
     </div>
 
